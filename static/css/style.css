@@ -2921,8 +2921,19 @@ input:checked + .slider:before {
   margin-right: 15px;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
 
-
+.gif-image {
+  display: block;
+  border-radius: 15px; 
+  max-width: 100%;
+  height: auto;
+  background-clip: padding-box;
+}
 
 
 
