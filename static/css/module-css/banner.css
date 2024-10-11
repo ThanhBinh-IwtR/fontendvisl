@@ -749,7 +749,7 @@
   position: relative;
   display: block;
   color: transparent;
-  background: linear-gradient(14deg, #4dff00 25%, rgba(255, 0, 128, 1) 50%, #005eff 75%);
+  background: linear-gradient(297deg, #4dff00 25%, #005eff 75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   min-height: 100px;

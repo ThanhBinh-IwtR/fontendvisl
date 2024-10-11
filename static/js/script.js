@@ -1,23 +1,23 @@
 (function($) {
 	
 	"use strict";
-	
-	//Hide Loading Box (Preloader)
+
+	// Hide Loading Box (Preloader)
 	function handlePreloader() {
-		if($('.loader-wrap').length){
+		if ($('.loader-wrap').length) {
+			// Đợi tài nguyên được tải và sau đó ẩn preloader
 			$('.loader-wrap').delay(2000).fadeOut(200);
 		}
 	}
 
-	if ($(".preloader-close").length) {
-        $(".preloader-close").on("click", function(){
-            $('.loader-wrap').delay(200).fadeOut(500);
-        })
-    }
-	
-	//Update Header Style and Scroll to Top
+	// Bổ sung sự kiện window load để chắc chắn preloader sẽ bị ẩn khi trang đã sẵn sàng
+	$(window).on('load', function() {
+		handlePreloader();
+	});
+
+	// Update Header Style and Scroll to Top
 	function headerStyle() {
-		if($('.main-header').length){
+		if ($('.main-header').length) {
 			var windowpos = $(window).scrollTop();
 			var siteHeader = $('.main-header');
 			var scrollLink = $('.scroll-top');
@@ -30,9 +30,12 @@
 			}
 		}
 	}
-	
-	headerStyle();
 
+	// Kiểm tra và cập nhật style header khi trang load xong và khi scroll
+	headerStyle();
+	$(window).on('scroll', function() {
+		headerStyle();
+	});
 
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
@@ -665,7 +668,6 @@
 	/* 9. ScrollAnimations */
 	var $containers = $('[data-animation]:not([data-animation-text]), [data-animation-box]');
 	$containers.scrollAnimations();
-
 
 	
 

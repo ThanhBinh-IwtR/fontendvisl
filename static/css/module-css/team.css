@@ -115,11 +115,13 @@
 
 .team-block-one .inner-box .lower-content h3 a{
   display: inline-block;
-  color: var(--title-color);
+  background: linear-gradient(141deg, #72cf95 25%, #7dace4 75%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .team-block-one .inner-box .lower-content h3 a:hover{
-  color: var(--theme-color);
+  color: #72cf95;
 }
 
 .team-block-one .inner-box .lower-content .designation{
@@ -127,6 +129,7 @@
   display: block;
   font-size: 16px;
   line-height: 26px;
+  color: #bcbcbc;
 }
 
 

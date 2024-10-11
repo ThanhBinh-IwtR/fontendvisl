@@ -34,7 +34,7 @@
   border-radius: 50%;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
   margin-bottom: 32px;
-  background: var(--theme-color);
+  background: linear-gradient(141deg, #72cf95 25%, #7dace4 75%) ;
 }
 
 .info-block-one .inner-box h3{
